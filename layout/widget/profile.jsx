@@ -66,14 +66,14 @@ class Profile extends Component {
                             </a>
                         </div>
                     </div>
-                    <div class="level-item has-text-centered is-marginless">
+                    {/*<div class="level-item has-text-centered is-marginless">
                         <div>
                             <p class="heading">{counter.category.title}</p>
                             <a href={counter.category.url}>
                                 <p class="title">{counter.category.count}</p>
                             </a>
                         </div>
-                    </div>
+                            </div>*/}
                     <div class="level-item has-text-centered is-marginless">
                         <div>
                             <p class="heading">{counter.tag.title}</p>
@@ -83,13 +83,13 @@ class Profile extends Component {
                         </div>
                     </div>
                 </nav>
-                {followLink ? <div class="level">
+                {/*{followLink ? <div class="level">
                     <a class="level-item button is-primary is-rounded" href={followLink} target="_blank" rel="noopener">{followTitle}</a>
-                </div> : null}
+                        </div> : null}*/}
                 {this.renderSocialLinks(socialLinks)}
                 {hasHitokoto == undefined || hasHitokoto ? <div>
                     <hr />
-                    <p id="hitokoto">:D 一言句子获取中...</p>
+                    <p id="hitokoto">now loading...</p>
                     <script type="text/javascript" dangerouslySetInnerHTML={{ __html: hitokotoJs }} defer={true}></script>
                 </div> : null}
 

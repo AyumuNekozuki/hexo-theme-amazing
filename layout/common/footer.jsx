@@ -21,7 +21,7 @@ class Footer extends Component {
             registeredNo,
             footerWebsiteTime
         } = this.props;
-        var footerWebsiteTimeTemp =  footerWebsiteTime+"";
+        var footerWebsiteTimeTemp = footerWebsiteTime + "";
         var timeArr = footerWebsiteTimeTemp.split("|");
         var timeJs = `function createTime(time) {
             var n = new Date(time);
@@ -48,9 +48,9 @@ class Footer extends Component {
                             {logo && logo.text ? logo.text : <img src={logoUrl} alt={siteTitle} height="28" />}
                         </a>
                         <p class="size-small">
-                            <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
+                            © 2020 AyumuNekozuki
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
-                                href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>,Modify by <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">removeif</a>&nbsp;
+                                href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>, <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a>&nbsp;
                             <br />
                             {registeredNo ? <span>&copy; <a href="http://www.beian.miit.gov.cn/" target="_blank">{registeredNo}</a><br /></span> : null}
                             {footerCopyrightDsec ? <span dangerouslySetInnerHTML={{ __html: footerCopyrightDsec }}></span> : null}
@@ -59,7 +59,7 @@ class Footer extends Component {
                                 <script dangerouslySetInnerHTML={{ __html: timeJs }}></script>
                                 <br />
                             </span> : null}
-                            {showVisitorCounter ? <div class="size-small"><span dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span></div> : null}
+                            {/*    {showVisitorCounter ? <div class="size-small"><span dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span></div> : null} */}
                         </p>
                     </div>
                     <div class="level-end">
@@ -102,7 +102,7 @@ class Footer extends Component {
 
 module.exports = cacheComponent(Footer, 'common.footer', props => {
     const { config, helper } = props;
-    const { url_for, _p, date, my_cdn,__ } = helper;
+    const { url_for, _p, date, my_cdn, __ } = helper;
     const { logo, title, author, footer, plugins, side_music_netease_id, website_start_time, footer_copyright_dsec, footer_registered_no, busuanzi_only_count, footer_website_time } = config;
 
     const links = {};
